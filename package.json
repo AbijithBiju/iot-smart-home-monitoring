@@ -4,5 +4,9 @@
     "version": "1.0.0",
     "engines": {
       "node": "14.17.0"
-    }
+    },"dependencies": {
+        "express":"*",
+        "body-parser":"*",
+        "bcrypt": "^0.8.5"
+     }
   }
