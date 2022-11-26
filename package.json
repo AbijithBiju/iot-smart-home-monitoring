@@ -1,0 +1,8 @@
+{
+    "name": "iot-smart-home-monitoring",
+    "description": "a really cool app",
+    "version": "1.0.0",
+    "engines": {
+      "node": "14.17.0"
+    }
+  }
