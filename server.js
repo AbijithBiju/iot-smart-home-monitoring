@@ -18,7 +18,7 @@ app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
   Data.find({}, (err, result) => {
-    if (err) {
+    if (err) {  
       console.log("ERROR");
     } else {
       res.header('Content-Type', 'text/event-stream')
