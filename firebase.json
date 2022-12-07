@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "../iot-smart-home-monitoring",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
