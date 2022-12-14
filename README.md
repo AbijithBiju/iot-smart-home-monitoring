@@ -1,5 +1,5 @@
 # iot-smart-home-monitoring
-click [here](https://iot-smart-home.w3spaces.com/) to view the website
+click [here](https://iot-smart-home.w3spaces-preview.com/index.html) to view the website
 
 to build front end
 ```console
