@@ -5,8 +5,13 @@ const newSchema = new Schema({
     temp: Number,
     sound: Number,
     humidity: Number,
-    time  : String
+    time  : String,
+})
+
+const newTable = new Schema({
+    switch : Boolean
 })
 
 const data = mongoose.model('data', newSchema)
+
 module.exports = data
