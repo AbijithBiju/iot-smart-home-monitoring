@@ -1,4 +1,6 @@
 # iot-smart-home-monitoring
+click [here](https://iot-smart-home.w3spaces.com/) to view the website
+
 to build front end
 ```console
 C:\Users>git clone https://github.com/AbijithBiju/iot-smart-home-monitoring.git
