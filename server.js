@@ -34,6 +34,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", async (req, res) => {
+  let actuation = false
   console.log(req.body);
   let { temp, humi, sound} = req.body;
   const data = new Data({
@@ -52,11 +53,16 @@ app.post("/", async (req, res) => {
       }); 
     } else {
       console.log("saved data successfully");
-      res.status(200);
-      res.json({
-        status: "SUCCESS",
-        message: "successful",
-      });
+      Actuation.findOne({},(error,result)=>{
+        if(error){
+          console.log('error findOne')
+        }else{
+          actuation = result.switch
+          console.log("findOne result => ",result.switch) 
+        }
+        res.status(200);
+        res.send(result.switch);
+    }) 
     }
   });
 });
@@ -79,10 +85,15 @@ app.get('/switch',(req,res)=>{
     if(error){
       res.status(400)
     }else{
+      res.status(200)
       if(result.switch){
-        res.send('1')
-      }else{
-        res.send('0')
+        res.json({
+          switch:'on'
+        })
+      }else{ 
+        res.json({
+          switch:'off'
+        }) 
       }
       console.log("findOne result => ",result.switch) 
     }
